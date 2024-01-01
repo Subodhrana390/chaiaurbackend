@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "javascript"
   ],
   "author": "Subodh Rana",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  }
 }
