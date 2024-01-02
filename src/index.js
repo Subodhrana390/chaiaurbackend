@@ -1,28 +1,27 @@
-import express from "express";
 import dotenv from "dotenv";
+import { app } from "./app.js";
 import { connectDB } from "./db/database.js";
-import cors from "cors";
 dotenv.config();
 
-const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
-
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
+connectDB()
+  .then(() => {
+    app.listen(port, () => {
+      try {
+        console.log(`Server connected on http://localhost:${port}`);
+      } catch (error) {
+        console.log(error);
+      }
+    });
+  })
+  .catch((err) => {
+    console.log("Mongo Connection Failed : ", err);
+  });
 
 app.on("error", (error) => {
   console.log("error : ", error);
   throw error;
 });
 
-app.listen(port, () => {
-  try {
-    connectDB();
-    console.log(`http://localhost:${port}`);
-  } catch (error) {
-    console.log(error);
-  }
-});
+
