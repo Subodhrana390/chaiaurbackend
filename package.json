@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
-  "keywords": [   
+  "keywords": [
     "javascript"
   ],
   "author": "Subodh Rana",
@@ -26,6 +26,7 @@
   "dependencies": {
     "cloudinary": "^1.41.1",
     "cookie-parser": "^1.4.6",
-    "mongoose-aggregate-paginate-v2": "^1.0.7"
+    "mongoose-aggregate-paginate-v2": "^1.0.7",
+    "pdf-lib": "^1.17.1"
   }
 }
