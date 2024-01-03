@@ -27,6 +27,7 @@
     "cloudinary": "^1.41.1",
     "cookie-parser": "^1.4.6",
     "mongoose-aggregate-paginate-v2": "^1.0.7",
+    "nodemailer": "^6.9.8",
     "pdf-lib": "^1.17.1"
   }
 }
